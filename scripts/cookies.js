@@ -27,4 +27,3 @@ var summerSlam=function(){
 		}
 	};
 }();
-	
