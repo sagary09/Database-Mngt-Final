@@ -7,14 +7,14 @@
 	</head>
 
 	<body>
-		<form name="form" action="/registration/" onsubmit="return summerSlam.formValidate(this);">
+		<form name="form" onload="createCookie">
 			<h2>Name:</h2> 
-				<input type="text" name="name" value="" id="name"><br />
+				<input type="text" name="name" id="name"><br />
 			<h2>Email:</h2> 
-				<input type="text" name="email" value="" id="email"><br />
+				<input type="text" name="email" id="email"><br />
 			<h2>Phone Number:</h2> 
-				<input type="text" name="phn" value="" id="phn"><br />
-				<input type="submit" value="submit"/>
+				<input type="text" name="phn" id="phn"><br />
+				<input type="submit" value="submit" onclick="submit"/>
 		</form>
 			
 	</body>
