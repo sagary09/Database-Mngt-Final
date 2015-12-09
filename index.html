@@ -6,8 +6,8 @@
 <link rel="stylesheet"  href="styles/styles.css">
 	</head>
 
-	<body onload="storeValues()">
-		<form name="myForm" id="myForm" method="post" onsubmit="return storeValues(this);">
+	<body onload="getCookie()">
+		<form name="myForm" id="myForm" onsubmit="return validateForm()" method="post">
 			<h2>Name:</h2> 
 				<input type="text" name="username" id="username"><br />
 			<h2>password:</h2> 
