@@ -1,5 +1,5 @@
 function validateForm(){
-var x=document.forms["myForm"]["name"].value;
+var x=document.forms["myForm"]["username"].value;
 	if (x==null||x==""){
 		alert("Name must be filled out");
 		return false;
@@ -7,23 +7,19 @@ var x=document.forms["myForm"]["name"].value;
 	else {
 		alert("Welcome!");
 	}
+	var storedValues="";
+	if(form.elements[x].id){
+		storedValues+= form.elements[x].id+"="+form.elements[x].value+",";
+	}
+	this.createCookie("sslam", storedValues, 30)
+	return false;
 }
-function setCookie(cookie_name,cookie_value, daysToExpire){
+function createCookie(cookie_name, cookie_value, daysToExpire){
 	var expirationDate=new Date();
 	expirationDate.setTime(expirationDate.getTime()+(daysToExpire*24*60*60*1000));
 	var expires = "expires="+expirationDate.toGMTString();
 	document.cookie=cookie_name+"="+cookie_value;
 }
-function storeValues(form)  
-  {
-    setCookie("name", form.name.value);
-    setCookie("email", form.email.value);
-    setCookie("phn", form.phn.value);
-    return true;
-  }
-  if(name = getCookie("name")) document.getElementById(myForm).name.value = name;
-  if(email = getCookie("email")) document.getElementById(myForm).email.value = email;
-  if(phn = getCookie("phn")) document.getElementById(myForm).phn.value = phn;
 function getCookie(cookie_name) {
     var name = cookie_name + "=";
     var ca = document.cookie.split(';');
@@ -34,18 +30,13 @@ function getCookie(cookie_name) {
             return c.substring(name.length, c.length);
         }
     }
-    return "";
+}
+function deleteCookie(cookie_name){
+    document.cookie=name + "=null; path=/; expires=" + expired.toGMTString();
+}
+function storeValues(form){
+	setCookie("username", form.username.value);
+	setCookie("password", form.password.value);
 }
 
-function checkCookie() {
-    var user=getCookie("name");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-           setCookie("username", user, 30);
-       }
-    }
-}
 
