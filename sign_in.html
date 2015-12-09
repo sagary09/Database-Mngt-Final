@@ -31,13 +31,15 @@
 			<h1>Sign In</h1>
 		</div>
 		<div class="form-body">
-			<form name="myForm" id="myForm" onsubmit="return validateForm()" method="post">
-				<h2>Name:</h2> 
-					<input type="text" name="username" id="username"><br />
-				<h2>password:</h2> 
-					<input type="password" name="password" id="password"><br />
-					<input type="submit" value="Login"/>
-					<input type="button" value ="delete_cookie" onclick= 'document.cookie = "username=; expires=Thu, 01 Jan 2000 00:00:00 GMT";'/>
+			<form name="myForm" class="form" onsubmit="return validateForm()" method="post">
+				<h2>Username:</h2> 
+					<input class="input" type="text" name="username" id="username"><br />
+				<h2>Password:</h2> 
+					<input class="input" type="password" name="password" id="password"><br />
+					<ul class="buttons">
+						<li><input class="b1"type="submit" value="Login"/></li>
+						<li><input class="b2"type="button" value ="Reset" onclick= 'document.cookie = "username=; expires=Thu, 01 Jan 2000 00:00:00 GMT";'/></li>
+					</ul>
 			</form>
 		</div>	
 </body>

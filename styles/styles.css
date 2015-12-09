@@ -163,7 +163,7 @@ h1{
 	position: relative;
 }
 .form h2{
-	color: #ABABAB;
+	color: #5A5A5A;
 	padding: 5px;
 	font-size: 14pt;
 	text-align: center;
@@ -171,20 +171,33 @@ h1{
 	font-family: 'Roboto', sans serif;
 }
 .input{
-	color:#ABABAB;
+	color:#5A5A5A;
 	width: 50%;
     margin-left: 25%;
 	padding: 10px;
 }
-.title h1{
-	padding-left: 10px;
-    color: #fff;
-    font-family: 'Roboto',sans serif;
-    font-size: 25pt;
-    padding: 20px;
-    text-align: center;
-    background-color: black;
+.buttons li{
+	flex: row;
+	display:inline;
+	padding: 10px;
+	list-style: none;
+	
 }
+
+.b1{
+	margin-left: 30%;
+	padding: 30px;
+	padding-left: 50px;
+	padding-right:50px;
+	color:#5A5A5A;
+	font-size: 14pt;
+	font-family:'Helvetica', sans serif;
+}
+.b2{
+	padding: 30px;
+	color:#5A5A5A;
+	font-size: 14pt;
+	font-family:'Helvetica', sans serif;
 .submit{
 	width: 250px;
     height: 44px;
