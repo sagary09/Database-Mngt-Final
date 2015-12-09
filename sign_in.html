@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head> 
+	<title>Sign in</title> 
+
+<link rel="stylesheet"  href="styles/styles.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+</head>
+
+<body onload="getCookie()">
+	<div class="container">
+		<div class="top_nav">
+			<div class="shop">
+				<a href="#" class="words">SIGN IN</a>
+				<a href="#" class="words">SIGN UP</a>
+				<a href="#" class="words"><img id="cart" src="images/cart.png"></img>CART (0)</a>
+			</div>
+		</div>
+		<img id="logo_bkgrnd" src="images/pics/bkgrnd.jpg">
+		</img>
+		<img id="logo" src="images/logo_exp.png"> 
+		</img>
+		<div id="menu" class="nav" >
+			<ul>
+				<li class="link" id="menu"><a href="#">ABOUT US</a></li>
+				<li class="link" id="menu"><a href="#">PRODUCTS</a></li>
+				<li class="link" id="menu"><a href="#">CONTACT US</a></li>
+			</ul>
+		</div>			
+		<div class="title">
+			<h1>Sign In</h1>
+		</div>
+		<div class="form-body">
+			<form name="myForm" id="myForm" onsubmit="return validateForm()" method="post">
+				<h2>Name:</h2> 
+					<input type="text" name="username" id="username"><br />
+				<h2>password:</h2> 
+					<input type="password" name="password" id="password"><br />
+					<input type="submit" value="Login"/>
+					<input type="button" value ="delete_cookie" onclick= 'document.cookie = "username=; expires=Thu, 01 Jan 2000 00:00:00 GMT";'/>
+			</form>
+		</div>	
+</body>
+	<script type="text/javascript" src="scripts/cookies.js"></script>
+</html>
