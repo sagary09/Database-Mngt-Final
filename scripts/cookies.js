@@ -1,7 +1,9 @@
 var summerSlam=function(){
     return{
 		formValidate: function(form){
-			var requiredFields=["name", "email", "phn" ]
+			alert("hello there");
+				return false;
+			var requiredFields=["name", "email", "phn"]
 			var storedValues="";
 			for(var x=0; x<form.elements.length; x++){
 				if(requiredFields.indexOf(form.elements[x].id)>-1){	
@@ -19,11 +21,11 @@ var summerSlam=function(){
 			this.createCookie("sslam", storedValues, 30)
 			return false;
 		},
-		createCookie: function(cookie_name,cookie_value, daysToExpire){
+		createCookie: function(cookie_name, cookie_value, daysToExpire){
 			var expirationDate=new Date();
 			expirationDate.setDate(expirationDate.getDate()+daysToExpire);
 			cookie_value+= ";expires="+expirationDate;
-			document.cookie=cookie_name+"="+cookie_value;
+			document.cookie='cookie_name=cookie_value; expires=Sat, 9 Jan 2016 20:47:11 UTC; path=/'
 		}
 	};
 }();
