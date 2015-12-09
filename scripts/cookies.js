@@ -11,7 +11,7 @@ var x=document.forms["myForm"]["username"].value;
 	if(form.elements[x].id){
 		storedValues+= form.elements[x].id+"="+form.elements[x].value+",";
 	}
-	this.createCookie("sslam", storedValues, 30)
+	this.createCookie("cookie_name", storedValues, 30)
 	return false;
 }
 function createCookie(cookie_name, cookie_value, daysToExpire){
@@ -34,9 +34,9 @@ function getCookie(cookie_name) {
 function deleteCookie(cookie_name){
     document.cookie=name + "=null; path=/; expires=" + expired.toGMTString();
 }
-function storeValues(form){
-	setCookie("username", form.username.value);
-	setCookie("password", form.password.value);
+function storeValues(myForm){
+	setCookie("username", myForm.username.value);
+	setCookie("password", myForm.password.value);
 }
 
 
