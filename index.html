@@ -6,8 +6,8 @@
 <link rel="stylesheet"  href="styles/styles.css">
 	</head>
 
-	<body onload="checkCookie()">
-		<form name="myForm">
+	<body>
+		<form name="myForm" id="myForm" onsubmit="return validateForm()" method="post">
 			<h2>Name:</h2> 
 				<input type="text" name="name" id="name"><br />
 			<h2>Email:</h2> 
