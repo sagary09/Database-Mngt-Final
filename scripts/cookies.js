@@ -8,30 +8,6 @@ var x=document.forms["myForm"]["username"].value;
 		alert("Welcome!");
 	}
 }
-function createCookie(cookie_name, cookie_value, daysToExpire){
-	var expirationDate=new Date();
-	expirationDate.setTime(expirationDate.getTime()+(daysToExpire));
-	var expires = "expires="+expirationDate.toGMTString();
-	document.cookie=cookie_name+"="+cookie_value;
-	var cookie_name='username';
-	var cookie_value='username';
-	create_cookie(cookie_name, cookie_value, 30, "/");
-		if(username = getCookie("username")) document.getElementById("username").value = username;
-		if(password = getCookie("password")) document.getElementById("password").value = password;
-}
-function getCookie(cookie_name) {
-    var name = cookie_name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-			
-        }
-    }
-    return "username";
-}
 var remembervalues_days=60 //Remember text input values for how many days?
 var dyncookiename=encodeURI(window.location.pathname) //Name of cookie. Changes depending on the page.
 
@@ -74,7 +50,6 @@ else if (window.attachEvent)
 window.attachEvent("onload", recallinput)
 else if (document.getElementById)
 window.onload=recallinput
-
   
 
 
